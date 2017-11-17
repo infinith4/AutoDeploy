@@ -1,0 +1,4 @@
+originalpath : ./testdir/
+servers :
+  - path : C:\inetpub\app\v5
+  - path : C:\inetpub\app1\v5
