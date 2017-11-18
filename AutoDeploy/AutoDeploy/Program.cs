@@ -16,10 +16,11 @@ namespace AutoDeploy
                 var fileUtil = new Utils.FileUtil();
                 string orgPath = yamlDeserialized.originalpath;
 
+                logger.Info("Start Copy To Files.");
                 bool isCopySuccess = fileUtil.CopyToDestinationDir(orgPath, yamlDeserialized.servers);
                 if (isCopySuccess)
                 {
-                    logger.Info("Copy To Files.");
+                    logger.Info("End Copied To Files.");
                 }
                 else
                 {
@@ -28,7 +29,7 @@ namespace AutoDeploy
             }
             catch (Exception ex)
             {
-                logger.Error("Failed Copy Files");
+                logger.Error("Failed Copy Files", ex);
             }
         }
     }
