@@ -1,0 +1,4 @@
+originalpath : ./testdir/
+servers :
+  - path : \\localhost\stored\204
+  - path : \\localhost\stored\206

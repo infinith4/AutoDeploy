@@ -9,7 +9,7 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace AutoDeploy.Utils
 {
-    public class YamlUtils
+    public class YamlUtil
     {
         public class YamlImporter
         {
@@ -18,7 +18,7 @@ namespace AutoDeploy.Utils
                 StreamReader sr = new StreamReader(yamlName);
                 string text = sr.ReadToEnd();
                 var input = new StringReader(text);
-                var deserializer = new Deserializer(namingConvention: new CamelCaseNamingConvention());
+                var deserializer = new Deserializer();
                 Models.ImportYaml.DeserializedObject deserializeObject = deserializer.Deserialize<Models.ImportYaml.DeserializedObject>(input);
                 return deserializeObject;
             }
